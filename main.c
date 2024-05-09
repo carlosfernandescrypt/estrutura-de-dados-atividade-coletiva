@@ -218,3 +218,13 @@ do {
       printf("Escolha uma opção: ");
       scanf("%d", &opcao);
       getchar();
+
+switch (opcao) {
+        case 1:
+          printf("Digite o nome do hóspede: ");
+          scanf("%s", nome);
+          printf("Digite o número do quarto: ");
+          scanf("%d", &quarto);
+          inserirHospede(nome, quarto);
+          atualizarLista();
+          break;
