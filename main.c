@@ -71,6 +71,21 @@ void mostrarQuartosVazios() {
     printf("\n");
 }
 
+void ordenarHospedes() {
+    int i, j;
+    Hospede temp;
+
+    for (i = 0; i < totalHospedes - 1; i++) {
+        for (j = i + 1; j < totalHospedes; j++) {
+            if (strcmp(hotel[i].nome, hotel[j].nome) > 0) { 
+                temp = hotel[i];
+                hotel[i] = hotel[j];
+                hotel[j] = temp;
+            }
+        }
+    }
+}
+
 
 
 
