@@ -94,7 +94,24 @@ void listarHospedes() {
     for (i = 0; i < totalHospedes; i++) {
         printf("Hóspede: %s, Quarto: %d\n", hotel[i].nome, hotel[i].quarto);
     }
+
+void buscarHospede(char *nome) {
+    int i;
+    int encontrado = 0;
+
+    for (i = 0; i < totalHospedes; i++) {
+        if (strcmp(hotel[i].nome, nome) == 0) {
+            printf("Hóspede encontrado: %s, Quarto: %d\n", hotel[i].nome, hotel[i].quarto);
+            encontrado = 1;
+            break;
+        }
+    }
+
+    if (!encontrado) {
+        printf("Hóspede %s não encontrado.\n", nome);
+    }
 }
+
 
 
 
