@@ -114,3 +114,16 @@ void atualizarLista() {
 
     printf("Lista de hóspedes atualizada.\n");
 }
+
+void limparArquivo() {
+    FILE *file = fopen("hospedes.txt", "w");
+
+    if (file == NULL) {
+        printf("Não foi possível abrir o arquivo.\n");
+        return;
+    }
+
+    fclose(file);
+    printf("Limpando a lista de hóspedes...");
+    printf("Dados do arquivo 'hospedes.txt' foram apagados.\n");
+}
