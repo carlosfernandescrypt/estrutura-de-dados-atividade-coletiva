@@ -205,3 +205,16 @@ int main() {
     char nomeNovo[MAX_NOME];
     int opcao;
     lerHospede();
+do {
+      printf("Menu do Sistema de Registro de Hóspedes:\n");
+      printf("1. Inserir hóspede\n"); 
+      printf("2. Listar hóspedes por ordem alfabética\n");
+      printf("3. Buscar hóspede\n");
+      printf("4. Editar hóspede\n");
+      printf("5. Liberar quarto\n");
+      printf("6. Mostrar quartos vazios\n");
+      printf("7. Salvar lista de hóspedes em arquivo\n");
+      printf("8. Sair\n");
+      printf("Escolha uma opção: ");
+      scanf("%d", &opcao);
+      getchar();
