@@ -246,3 +246,9 @@ switch (opcao) {
           editarHospede(nome, nomeNovo, quarto);
           atualizarLista();
           break;
+        case 5:
+          printf("Digite o número do quarto a ser liberado: ");
+          scanf("%d", &quarto);
+          liberarQuarto(quarto);
+          atualizarLista();
+          break;
