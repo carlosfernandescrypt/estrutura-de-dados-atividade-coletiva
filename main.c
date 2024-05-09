@@ -8,3 +8,9 @@
 #define MAX_QUARTOS 100
 #define MAX_HOSPEDES_POR_QUARTO 4
 
+typedef struct {
+    char nome[MAX_NOME];
+    int quarto;
+} Hospede;
+
+
