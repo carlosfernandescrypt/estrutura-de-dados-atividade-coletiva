@@ -60,6 +60,34 @@ void lerHospede() {
     printf("Hóspedes lidos do arquivo 'hospedes.txt' e inseridos no hotel.\n");
 }
 
+void mostrarQuartosVazios() {
+    int i;
+    printf("Quartos vazios: ");
+    for (i = 0; i < MAX_QUARTOS; i++) {
+        if (quartos[i] == 0) {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 void liberarQuarto(int quarto) {
     int i;
     int encontrado = 0;
