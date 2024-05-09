@@ -231,3 +231,8 @@ switch (opcao) {
         case 2:
           listarHospedes();
           break;
+        case 3:
+          printf("Digite o nome do hóspede a ser buscado: ");
+          scanf("%s", nome);
+          buscarHospede(nome);
+          break;
