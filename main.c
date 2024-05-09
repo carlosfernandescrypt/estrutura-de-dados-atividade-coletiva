@@ -268,3 +268,10 @@ switch (opcao) {
           limparArquivo();
           printf("Saindo do sistema...\n");
           break;
+          default:
+          printf("Opção inválida. Tente novamente.\n");
+          break; 
+      } 
+  } while (opcao != 8);
+  return 0;
+}
