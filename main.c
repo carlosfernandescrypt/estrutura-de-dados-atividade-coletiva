@@ -60,3 +60,21 @@ void lerHospede() {
     printf("Hóspedes lidos do arquivo 'hospedes.txt' e inseridos no hotel.\n");
 }
 
+void liberarQuarto(int quarto) {
+    int i;
+    int encontrado = 0;
+    for (i = 0; i < totalHospedes; i++) {
+        if (hotel[i].quarto == quarto) {
+            memmove(&hotel[i], &hotel[i + 1], (totalHospedes - i - 1) * sizeof(Hospede));
+            totalHospedes--;
+            encontrado = 1;
+        }
+    }
+
+    if (encontrado) {
+        printf("Quarto %d liberado.\n", quarto);
+        quartos[quarto] = 0;
+    } else {
+        printf("Quarto %d não está ocupado.\n", quarto);
+    }
+}
