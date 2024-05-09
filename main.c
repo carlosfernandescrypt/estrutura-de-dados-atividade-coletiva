@@ -228,3 +228,6 @@ switch (opcao) {
           inserirHospede(nome, quarto);
           atualizarLista();
           break;
+        case 2:
+          listarHospedes();
+          break;
