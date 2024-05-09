@@ -86,6 +86,16 @@ void ordenarHospedes() {
     }
 }
 
+void listarHospedes() {
+    int i;
+
+    ordenarHospedes(); 
+    printf("Listando %d hóspedes:\n", totalHospedes);
+    for (i = 0; i < totalHospedes; i++) {
+        printf("Hóspede: %s, Quarto: %d\n", hotel[i].nome, hotel[i].quarto);
+    }
+}
+
 
 
 
