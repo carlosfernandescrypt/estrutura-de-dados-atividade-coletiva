@@ -198,3 +198,10 @@ void limparArquivo() {
     printf("Limpando a lista de hóspedes...");
     printf("Dados do arquivo 'hospedes.txt' foram apagados.\n");
 }
+
+int main() {
+    char nome[MAX_NOME];
+    int quarto;
+    char nomeNovo[MAX_NOME];
+    int opcao;
+    lerHospede();
