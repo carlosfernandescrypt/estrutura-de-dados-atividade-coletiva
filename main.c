@@ -96,3 +96,21 @@ void salvarHospedes() {
 
     printf("Lista de hóspedes salva com sucesso em 'listadehospedes.txt'.\n");
 }
+
+void atualizarLista() {
+    FILE *file = fopen("hospedes.txt", "w");
+    int i;
+
+    if (file == NULL) {
+        printf("Não foi possível abrir o arquivo.\n");
+        return;
+    }
+
+    for (i = 0; i < totalHospedes; i++) {
+        fprintf(file, "Hóspede: %s, Quarto: %d\n", hotel[i].nome, hotel[i].quarto);
+    }
+
+    fclose(file);
+
+    printf("Lista de hóspedes atualizada.\n");
+}
