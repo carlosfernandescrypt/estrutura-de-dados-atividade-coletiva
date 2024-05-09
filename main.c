@@ -38,3 +38,25 @@ void inserirHospede(char *nome, int quarto) {
     quartos[quarto]++;
 }
 
+void lerHospede() { 
+    FILE *file = fopen("hospedes.txt", "r");
+    char linha[MAX_NOME + 20];
+    char nome[MAX_NOME];
+    int quarto;
+
+    if (file == NULL) {
+        printf("Não foi possível abrir o arquivo.\n");
+        return;
+    }
+
+    while (fgets(linha, sizeof(linha), file) != NULL) {
+        if (sscanf(linha, "Hóspede: %[^,], Quarto: %d", nome, &quarto) == 2) {
+            inserirHospede(nome, quarto);
+        }
+    }
+
+    fclose(file);
+
+    printf("Hóspedes lidos do arquivo 'hospedes.txt' e inseridos no hotel.\n");
+}
+
