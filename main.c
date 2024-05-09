@@ -258,3 +258,13 @@ switch (opcao) {
           liberarQuarto(quarto);
           atualizarLista();
           break;
+        case 6:
+          mostrarQuartosVazios();
+          break;
+        case 7:
+          salvarHospedes();
+          break;
+        case 8:
+          limparArquivo();
+          printf("Saindo do sistema...\n");
+          break;
