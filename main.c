@@ -236,3 +236,13 @@ switch (opcao) {
           scanf("%s", nome);
           buscarHospede(nome);
           break;
+        case 4:
+          printf("Digite o nome do hóspede a ser editado: ");
+          scanf("%s", nome);
+          printf("Digite o novo nome do hóspede: ");
+          scanf("%s", nomeNovo);
+          printf("Digite o novo número do quarto: ");
+          scanf("%d", &quarto);
+          editarHospede(nome, nomeNovo, quarto);
+          atualizarLista();
+          break;
