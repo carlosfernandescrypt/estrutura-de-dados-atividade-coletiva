@@ -13,4 +13,10 @@ typedef struct {
     int quarto;
 } Hospede;
 
+void inicializarQuartos() {
+    int i;
+    for (i = 0; i < MAX_QUARTOS; i++) {
+        quartos[i] = 0;
+    }
+}
 
