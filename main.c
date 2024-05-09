@@ -131,24 +131,6 @@ void editarHospede(char *nome, char *novoNome, int novoQuarto) {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 void liberarQuarto(int quarto) {
     int i;
     int encontrado = 0;
