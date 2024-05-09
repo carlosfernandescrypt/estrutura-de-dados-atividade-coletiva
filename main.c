@@ -115,16 +115,22 @@ void buscarHospede(char *nome) {
 void editarHospede(char *nome, char *novoNome, int novoQuarto) {
     int i;
     int encontrado = 0;
-
+    int temp;
+    
     for (i = 0; i < totalHospedes; i++) {
         if (strcmp(hotel[i].nome, nome) == 0) {
             strcpy(hotel[i].nome, novoNome);
+            temp = hotel[i].quarto;
             hotel[i].quarto = novoQuarto;
+            quartos[temp]--;
+            quartos[novoQuarto]++;
+            
             printf("Hóspede editado: %s, Quarto: %d\n", hotel[i].nome, hotel[i].quarto);
             encontrado = 1;
             break;
         }
     }
+    
 
     if (!encontrado) {
         printf("Hóspede %s não encontrado.\n", nome);
