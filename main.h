@@ -15,10 +15,6 @@ typedef struct {
     int quarto;
 } Hospede;
 
-extern Hospede hotel[MAX_HOSPEDES];
-extern int totalHospedes;
-extern int quartos[MAX_QUARTOS];
-
 void inicializarQuartos(); // 1
 void inserirHospede(char *nome, int quarto);
 void lerHospede();
